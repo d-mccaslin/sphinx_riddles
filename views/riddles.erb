@@ -1,0 +1,15 @@
+<h1>List of riddles</h1>
+
+<h3>Pick one to start</h3>
+
+<% if @riddles.any? %>
+  <ul>
+    <% @riddles.each do |riddle| %>
+      <li><a href="/riddles/<%= riddle.id %>"><%= riddle.text %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no riddles available</p>
+<% end %>
+
+<a href="">Placeholder button</a>
